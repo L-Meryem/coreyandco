@@ -99,6 +99,10 @@ body {
     font-family: "Space Mono", monospace;
 }
 
+.page-wrapper{
+    max-height: 800px;
+}
+
 header {
     position: relative;
     height: 100vh;
