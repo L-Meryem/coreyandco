@@ -1,0 +1,188 @@
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+*:not(dialog) {
+    margin: 0;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        interpolate-size: allow-keywords;
+    }
+}
+
+body {
+    /* 4. Add accessible line-height */
+    line-height: 1.5;
+    /* 5. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+}
+
+/* 6. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+    text-wrap: pretty;
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-wrap: balance;
+}
+
+/*
+  10. Create a root stacking context
+*/
+#root,
+#__next {
+    isolation: isolate;
+}
+
+/* ---------------- */
+
+:root {
+    --gray-color:white;
+    --dark-gray-color: #424242;
+    --black-color: rgb(15, 15, 15);
+}
+
+body {
+    background-color: var(--gray-color);
+    color: var(--black-color);
+    font-family: "Space Mono", monospace;
+}
+
+header {
+    position: relative;
+    height: 100vh;
+    /* width: 100vw; */
+    display: flex;
+    justify-content: center;
+}
+
+header h1 {
+    position: absolute;
+    width: 100%;
+
+    padding: 7rem 0;
+    text-align: center;
+    
+    font-size: 6rem;
+    font-family: "Buda", serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+img {
+    margin: auto;
+    width: 99%;
+    height: 92%;
+    object-fit: cover;
+    margin: 2rem 0;
+    border: 1px solid rgb(151, 151, 151);
+}
+
+.blackboard-text {
+    position: absolute;
+    font-size: 2.4rem;
+    width: 50%;
+    bottom: 1rem;
+    left: 2rem;
+    color: var(--gray-color);
+}
+
+main,
+header{
+    width: 80%;
+    margin: auto;
+}
+
+.instagram-feed {
+    width: 100%;
+    margin: auto;
+}
+
+footer {
+    text-align: center;
+    padding: 4rem 0;
+    font-size: 1rem;
+    color: var(--dark-gray-color);
+    /* border-top: 1px solid black; */
+}
+
+.mailing {
+    margin-bottom: 1rem;
+}
+
+.mailing input,
+.mailing button {
+    padding: .4rem 1rem;
+    border-radius: 0;
+    border: 1px solid var(--black-color);
+    background-color: var(--gray-color);
+}
+
+.mailing button {
+    background-color: var(--black-color);
+    color: var(--gray-color);
+    margin-left: -12px;
+}
+
+.contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .6rem
+}
+
+.contacts svg {
+    height: 1.2rem;
+    fill: currentColor;
+}
