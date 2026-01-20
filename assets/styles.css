@@ -147,6 +147,7 @@ header {
     text-align: justify;
     color: rgb(165, 165, 165);
     width: 66%;
+    max-width: 950px;
     line-height: 1.2;
 }
 
