@@ -88,8 +88,9 @@ h6 {
 /* ---------------- */
 
 :root {
-    --gray-color: white;
-    --dark-gray-color: #424242;
+    --gray-color: rgb(255, 255, 255);
+    --dark-gray-color: rgb(66, 66, 66);
+    --chalk-color: rgb(165, 165, 165);
     --black-color: rgb(15, 15, 15);
 }
 
@@ -97,10 +98,6 @@ body {
     background-color: var(--gray-color);
     color: var(--black-color);
     font-family: "Kantumruy Pro", sans-serif;
-}
-
-.page-wrapper {
-    margin: 0;
 }
 
 header {
@@ -142,12 +139,14 @@ header {
 
 .blackboard {
     position: absolute;
-    font-size: 2.3rem;
+    font-size: 2rem;
     font-family: "Cabin Sketch", sans-serif;
-    bottom: 1%;
+    bottom: clamp(2%, 4vh, 1%);
     left: 2rem;
+    text-align: justify;
     color: rgb(165, 165, 165);
-    max-width: 950px;
+    width: 66%;
+    line-height: 1.2;
 }
 
 .blackboard-signature {
@@ -155,7 +154,9 @@ header {
 }
 
 .blackboard small {
-    font-size: 1.7rem;
+    font-size: 1.6rem;
+    display: block;
+    padding: 1.6rem 0 .7rem 0;
 }
 
 .instagram-feed {
@@ -243,30 +244,33 @@ footer {
         margin: auto;
     }
 
-    /* 
     .blackboard {
-        position: absolute;
-        font-size: 2.3rem;
-        font-family: "Cabin Sketch", sans-serif;
-        bottom: 1%;
-        left: 2rem;
-        color: rgb(165, 165, 165);
-        border: 2px solid blue;
-        max-width: 950px;
-    }
-
-    .blackboard-signature {
-        text-align: right;
+        font-size: 1.4rem;
+        width: 90%;
+        margin: auto;
+        left: 4%;
+        bottom: 0.5%;
     }
 
     .blackboard small {
-        font-size: 1.7rem;
-    } */
-
+        font-size: 1.2rem;
+    }
 }
 
 @media screen and (max-width: 425px) {
     .info-wrapper input {
         max-width: 200px;
+    }
+
+    .blackboard {
+        font-size: 1.4rem;
+        width: 90%;
+        margin: auto;
+        left: 4%;
+        bottom: 0.5%;
+    }
+
+    .blackboard small {
+        font-size: 1.16rem;
     }
 }
