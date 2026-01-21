@@ -142,7 +142,9 @@ header {
     font-size: 2rem;
     font-family: "Cabin Sketch", sans-serif;
     /* bottom: clamp(2%, 4vh, 1%); */
-    top: 75%;
+    /* top: 75%; */
+    bottom: 0;
+    padding-bottom: 4%;
     left: 2rem;
     text-align: justify;
     color: rgb(165, 165, 165);
@@ -158,7 +160,7 @@ header {
 .blackboard small {
     font-size: 1.6rem;
     display: block;
-    padding: 1.6rem 0 .7rem 0;
+    padding-top: 1rem;
     text-align: left;
 }
 
@@ -186,9 +188,9 @@ footer {
     position: relative;
 }
 
-.info-wrapper #mc_embed_signup_scroll{
-display: flex;
-justify-content: center;
+.info-wrapper #mc_embed_signup_scroll {
+    display: flex;
+    justify-content: center;
 }
 
 .info-wrapper h4 {
@@ -232,7 +234,7 @@ justify-content: center;
 
 /* -- @Media -- */
 
-@media screen and (width < 1025px) {
+@media screen and (width <=1024px) {
     .intro {
         width: 100vw;
         text-align: center;
@@ -251,15 +253,18 @@ justify-content: center;
         width: clamp(400px, 80vw, 670px);
         margin: auto;
     }
+
+    .blackboard {
+        width: 68%;
+    }
 }
 
-@media screen and (width < 775px) {
+@media screen and (width < 769px) {
     .blackboard {
-        font-size: 1.4rem;
+        font-size: 1.6rem;
         width: 90%;
         margin: auto;
         left: 4%;
-        top: 73%;
     }
 
     .blackboard small {
@@ -273,6 +278,11 @@ justify-content: center;
         text-align: center;
         bottom: 47%;
     }
+
+    .blackboard {
+        width: 67%;
+        bottom: -2rem;
+    }
 }
 
 @media screen and (max-width: 425px) {
@@ -281,14 +291,14 @@ justify-content: center;
     }
 
     .blackboard {
-        font-size: 1.4rem;
+        font-size: 1.5rem;
         width: 90%;
         margin: auto;
         left: 4%;
-        /* bottom: 0.5%; */
+        bottom: 3.5%;
     }
 
     .blackboard small {
-        font-size: 1.16rem;
+        font-size: 1.3rem;
     }
 }
